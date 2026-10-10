@@ -1,0 +1,70 @@
+# Environments & Secrets
+.env
+.env.local
+.env.*.local
+*.env
+*.pem
+*.key
+*.crt
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environments
+.venv
+venv/
+ENV/
+env/
+apps/control-plane/.venv/
+apps/scanner-worker/.venv/
+
+# Databases & Cache
+*.db
+*.db*
+*.sqlite3
+*.sqlite3*
+*.sqlite
+*.sqlite*
+asm_dev.db*
+*.backup*
+*.log
+scratch_*
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Node / Next.js
+apps/web-frontend/node_modules/
+apps/web-frontend/.next/
+apps/web-frontend/out/
+apps/web-frontend/build/
+.next/
+node_modules/
+
+# OS / IDE
+.DS_Store
+.vscode/
+.idea/
+*.swp
+*.swo

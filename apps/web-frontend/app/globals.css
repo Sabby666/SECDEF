@@ -1,0 +1,310 @@
+:root {
+  /* Light-First Primary Palette (Stitch Specification) */
+  --bg-app: #FFFFFF;
+  --bg-primary: #FFFFFF;
+  --bg-surface-secondary: #F8F9FB;
+  --bg-surface-tertiary: #F3F4F6;
+  --bg-surface-hover: #F1F5F9;
+  
+  --border-subtle: #E5E7EB;
+  --border-primary: #E5E7EB;
+  --border-strong: #D1D5DB;
+  --border-focused: #2563EB;
+  
+  --text-primary: #111827;
+  --text-secondary: #4B5563;
+  --text-tertiary: #9CA3AF;
+  --text-brand: #2563EB;
+  
+  --accent: #2563EB;
+  --accent-hover: #1D4ED8;
+  --button-dark: #0F172A;
+  --button-dark-hover: #1E293B;
+  
+  /* Restrained State Semantic Colors */
+  --severity-critical-bg: #FEF2F2;
+  --severity-critical-text: #DC2626;
+  --severity-critical-border: #FCA5A5;
+
+  --severity-high-bg: #FFFBEB;
+  --severity-high-text: #D97706;
+  --severity-high-border: #FCD34D;
+
+  --severity-medium-bg: #EFF6FF;
+  --severity-medium-text: #2563EB;
+  --severity-medium-border: #93C5FD;
+
+  --severity-low-bg: #F3F4F6;
+  --severity-low-text: #4B5563;
+  --severity-low-border: #D1D5DB;
+
+  --severity-info-bg: #F3F4F6;
+  --severity-info-text: #4B5563;
+  --severity-info-border: #E5E7EB;
+
+  --success-bg: #F0FDF4;
+  --success-text: #16A34A;
+  --success-border: #86EFAC;
+  
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  background-color: var(--bg-app);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.mono {
+  font-family: var(--font-mono);
+  font-size: 13px;
+}
+
+/* Base Primitives & CSS Utilities */
+.asm-card {
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-subtle);
+  border-radius: 6px;
+  padding: 16px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.02);
+}
+
+.asm-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 12px;
+  margin-bottom: 14px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+/* Horizontal Metric Strip */
+.asm-metric-ribbon {
+  display: flex;
+  align-items: center;
+  background-color: var(--bg-surface-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: 6px;
+  padding: 14px 20px;
+  width: 100%;
+}
+
+.asm-metric-item {
+  flex: 1;
+  padding: 0 16px;
+  border-right: 1px solid var(--border-subtle);
+}
+
+.asm-metric-item:first-child {
+  padding-left: 0;
+}
+
+.asm-metric-item:last-child {
+  border-right: none;
+  padding-right: 0;
+}
+
+.asm-metric-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.asm-metric-value {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-top: 4px;
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.asm-metric-subtext {
+  font-size: 11.5px;
+  color: var(--text-secondary);
+  font-weight: 400;
+}
+
+/* Data Tables */
+.asm-table-container {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid var(--border-subtle);
+  border-radius: 6px;
+  background-color: var(--bg-primary);
+}
+
+.asm-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 13px;
+}
+
+.asm-table th {
+  background-color: var(--bg-surface-secondary);
+  color: var(--text-secondary);
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 11.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.asm-table td {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border-subtle);
+  color: var(--text-primary);
+}
+
+.asm-table tr:last-child td {
+  border-bottom: none;
+}
+
+.asm-table tr:hover {
+  background-color: var(--bg-surface-secondary);
+}
+
+/* Badges */
+.asm-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 2px 7px;
+  border-radius: 4px;
+  border: 1px solid transparent;
+}
+
+.badge-critical {
+  background-color: var(--severity-critical-bg);
+  color: var(--severity-critical-text);
+  border-color: var(--severity-critical-border);
+}
+
+.badge-high {
+  background-color: var(--severity-high-bg);
+  color: var(--severity-high-text);
+  border-color: var(--severity-high-border);
+}
+
+.badge-medium {
+  background-color: var(--severity-medium-bg);
+  color: var(--severity-medium-text);
+  border-color: var(--severity-medium-border);
+}
+
+.badge-low {
+  background-color: var(--severity-low-bg);
+  color: var(--severity-low-text);
+  border-color: var(--severity-low-border);
+}
+
+.badge-info {
+  background-color: var(--severity-info-bg);
+  color: var(--severity-info-text);
+  border-color: var(--severity-info-border);
+}
+
+.badge-success {
+  background-color: var(--success-bg);
+  color: var(--success-text);
+  border-color: var(--success-border);
+}
+
+/* Buttons */
+.asm-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 12.5px;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background-color 0.1s ease, border-color 0.1s ease;
+}
+
+.asm-btn-dark {
+  background-color: var(--button-dark);
+  color: #FFFFFF;
+  border-color: var(--button-dark);
+}
+
+.asm-btn-dark:hover {
+  background-color: var(--button-dark-hover);
+}
+
+.asm-btn-primary {
+  background-color: var(--accent);
+  color: #FFFFFF;
+  border-color: var(--accent);
+}
+
+.asm-btn-primary:hover {
+  background-color: var(--accent-hover);
+}
+
+.asm-btn-secondary {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  border-color: var(--border-subtle);
+}
+
+.asm-btn-secondary:hover {
+  background-color: var(--bg-surface-secondary);
+  border-color: var(--border-strong);
+}
+
+.asm-btn-danger {
+  background-color: var(--severity-critical-bg);
+  color: var(--severity-critical-text);
+  border-color: var(--severity-critical-border);
+}
+
+.asm-btn-danger:hover {
+  background-color: #FEE2E2;
+}
+
+/* Form Inputs */
+.asm-input {
+  width: 100%;
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-primary);
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 13px;
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+
+.asm-input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px var(--accent);
+}
