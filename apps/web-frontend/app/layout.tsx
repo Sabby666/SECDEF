@@ -74,6 +74,8 @@ const NAV_GROUPS: NavGroup[] = [
   }
 ];
 
+const ALL_NAV_HREFS = NAV_GROUPS.flatMap((g) => g.items.map((i) => i.href));
+
 export default function RootLayout({
   children,
 }: {
@@ -275,11 +277,17 @@ export default function RootLayout({
                     <div style={{ display: "flex", flexDirection: "column", gap: "1px" }}>
                       {group.items.map((item, idx) => {
                         const Icon = item.icon;
-                        const isActive = pathname === item.href && group.group === "OVERVIEW";
+                        const isExact = pathname === item.href;
+                        const isChild = item.href !== "/" && pathname.startsWith(item.href + "/");
+                        const hasMoreSpecificNavMatch = isChild && ALL_NAV_HREFS.some(
+                          (other) => other !== item.href && (pathname === other || pathname.startsWith(other + "/"))
+                        );
+                        const isActive = isExact || (isChild && !hasMoreSpecificNavMatch);
                         return (
                           <Link
                             key={`${item.label}-${idx}`}
                             href={item.href}
+                            aria-current={isActive ? "page" : undefined}
                             style={{
                               display: "flex",
                               alignItems: "center",

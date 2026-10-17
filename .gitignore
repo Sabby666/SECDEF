@@ -61,6 +61,7 @@ apps/web-frontend/out/
 apps/web-frontend/build/
 .next/
 node_modules/
+*.tsbuildinfo
 
 # OS / IDE
 .DS_Store
