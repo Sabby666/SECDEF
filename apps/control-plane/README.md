@@ -1,6 +1,6 @@
 # Control Plane Application
 
-Modular Monolith backend for the Attack Surface Monitor.
+Modular Monolith backend for SECDEF.
 
 ## Features (Phase 0)
 - FastAPI async-native framework

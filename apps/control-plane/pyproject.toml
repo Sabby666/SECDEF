@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "asm-control-plane"
 version = "1.0.0"
-description = "Control Plane Modular Monolith API for Attack Surface Monitor"
+description = "Control Plane Modular Monolith API for SECDEF"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [

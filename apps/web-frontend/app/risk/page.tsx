@@ -93,7 +93,7 @@ export default function RiskBrowserPage() {
             {topAssessment ? topAssessment.explanation : "Score = Base Exposure (0) + Context Risk (0)"}
           </div>
           <div style={{ fontSize: "12px", color: "#4B5563" }}>
-            ASM risk calculations are fully explainable, rule-based formulas. No black-box AI scores.
+            SECDEF risk calculations are fully explainable, rule-based formulas. No black-box AI scores.
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
 # Scanner Worker Application
 
-Isolated Network Discovery Worker for Attack Surface Monitor.
+Isolated Network Discovery Worker for SECDEF.
 
 ## Architectural Boundaries
 

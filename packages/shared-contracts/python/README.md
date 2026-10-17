@@ -1,6 +1,6 @@
 # Shared Contracts Package
 
-Pure data contracts, shared DTOs, event schemas, and enums for Attack Surface Monitor.
+Pure data contracts, shared DTOs, event schemas, and enums for SECDEF.
 
 ## Boundary Rules
 

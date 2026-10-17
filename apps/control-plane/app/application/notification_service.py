@@ -276,7 +276,7 @@ class NotificationService:
             # Construct structured evidence payload
             title = f"[{event_risk_band}] Security Event: {trigger_type.replace('_', ' ').title()}"
             summary = (
-                f"ASM detected {trigger_type} for entity '{change.entity_identifier if change else source_id}'. "
+                f"SECDEF detected {trigger_type} for entity '{change.entity_identifier if change else source_id}'. "
                 f"Risk Band: {event_risk_band}."
             )
 

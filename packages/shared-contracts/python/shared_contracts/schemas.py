@@ -16,7 +16,7 @@ class HealthResponse(BaseModel):
 
 
 class SystemStatusResponse(BaseModel):
-    app_name: str = "Attack Surface Monitor"
+    app_name: str = "SECDEF"
     environment: str = "development"
     database_connected: bool = False
     redis_connected: bool = False

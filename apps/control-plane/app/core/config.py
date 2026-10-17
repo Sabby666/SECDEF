@@ -11,7 +11,7 @@ class Settings(BaseSettings):
         extra="ignore"
     )
 
-    APP_NAME: str = "Attack Surface Monitor"
+    APP_NAME: str = "SECDEF"
     APP_ENV: str = Field(default="development", description="development, staging, production")
     LOG_LEVEL: str = "INFO"
     

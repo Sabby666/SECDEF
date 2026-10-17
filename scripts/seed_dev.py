@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Development Database Seed Script for Attack Surface Monitor (ASM)
+Development Database Seed Script for SECDEF
 
 Populates clean development SQLite database with the canonical local organization:
 - Organization: org-001 (Local Development Org)

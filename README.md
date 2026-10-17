@@ -1,8 +1,10 @@
-# Attack Surface Monitor (ASM)
+# SECDEF
 
-Attack Surface Monitor (ASM) is an open-source cybersecurity platform designed to continuously map, inventory, assess, and monitor internet-exposed assets across an organization's perimeter.
+**External Attack Surface Management & Exposure Intelligence Platform**
 
-ASM provides security teams with visibility into external digital footprints, discovering newly created subdomains, unmanaged cloud services, dangling DNS records, expiring SSL/TLS certificates, and exposed application services before adversaries exploit them.
+SECDEF is an open-source cybersecurity platform designed to continuously map, inventory, assess, and monitor internet-exposed assets across an organization's perimeter.
+
+SECDEF provides security teams with visibility into external digital footprints, discovering newly created subdomains, unmanaged cloud services, dangling DNS records, expiring SSL/TLS certificates, and exposed application services before adversaries exploit them.
 
 ---
 
@@ -14,7 +16,7 @@ Modern enterprise attack surfaces are highly dynamic:
 - Point-in-time penetration tests and monthly vulnerability scans fail to detect risks that appear between scanning intervals.
 - Security teams lack provenance tracking to distinguish verified organizational assets from third-party shadows.
 
-ASM addresses these challenges by continuously ingesting external telemetry, enforcing cryptographic target verification, and providing deterministic risk modeling and automated remediation governance.
+SECDEF addresses these challenges by continuously ingesting external telemetry, enforcing cryptographic target verification, and providing deterministic risk modeling and automated remediation governance.
 
 ---
 

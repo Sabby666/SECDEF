@@ -85,12 +85,12 @@ export default function AssistantPage() {
             AI Investigation Assistant
           </h1>
           <p style={{ fontSize: "12px", color: "#4B5563", marginTop: "2px", margin: 0 }}>
-            Subordinate AI assistance layer grounded in authoritative ASM scan data.
+            Subordinate AI assistance layer grounded in authoritative SECDEF scan data.
           </p>
         </div>
         <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
           <span style={{ fontSize: "12px", padding: "4px 8px", backgroundColor: "#F3F4F6", border: "1px solid #D1D5DB", color: "#4B5563", borderRadius: "4px" }}>
-            SUBORDINATE TO ASM AUTHORITY
+            SUBORDINATE TO SECDEF AUTHORITY
           </span>
         </div>
       </div>
@@ -153,7 +153,7 @@ export default function AssistantPage() {
                   Ask an AI-Assisted Security Query
                 </div>
                 <div style={{ fontSize: "13px", color: "#4B5563", marginTop: "6px" }}>
-                  Query asset relationships, exposure reasoning, or threat correlation. AI output is strictly labeled and subordinate to verified ASM evidence.
+                  Query asset relationships, exposure reasoning, or threat correlation. AI output is strictly labeled and subordinate to verified SECDEF evidence.
                 </div>
               </div>
             ) : (
@@ -185,7 +185,7 @@ export default function AssistantPage() {
                       {m.structured_data.facts && m.structured_data.facts.length > 0 && (
                         <div>
                           <div style={{ fontSize: "11px", fontWeight: 700, color: "#16A34A", marginBottom: "4px" }}>
-                            ASM EVIDENCE (AUTHORITATIVE)
+                            SECDEF EVIDENCE (AUTHORITATIVE)
                           </div>
                           {m.structured_data.facts.map((f: string, fi: number) => (
                             <div key={fi} style={{ fontSize: "12px", fontFamily: "monospace", color: "#111827", backgroundColor: "#F0FDF4", border: "1px solid #86EFAC", padding: "4px 8px", borderRadius: "4px", marginBottom: "4px" }}>
@@ -261,10 +261,10 @@ export default function AssistantPage() {
           </div>
         </div>
 
-        {/* PANEL 3: RIGHT 280px Referenced ASM Objects */}
+        {/* PANEL 3: RIGHT 280px Referenced SECDEF Objects */}
         <div style={{ width: "280px", borderLeft: "1px solid #E5E7EB", backgroundColor: "#FFFFFF", padding: "16px", overflowY: "auto" }}>
           <div style={{ fontSize: "13px", fontWeight: 600, color: "#111827", marginBottom: "12px", display: "flex", alignItems: "center", gap: "6px" }}>
-            <Database size={14} style={{ color: "#4B5563" }} /> Referenced ASM Objects
+            <Database size={14} style={{ color: "#4B5563" }} /> Referenced SECDEF Objects
           </div>
 
           {referencedFacts.length === 0 ? (
@@ -274,7 +274,7 @@ export default function AssistantPage() {
           ) : (
             <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
               <div style={{ fontSize: "11px", fontWeight: 600, color: "#16A34A" }}>
-                VERIFIED ASM EVIDENCE
+                VERIFIED SECDEF EVIDENCE
               </div>
               {referencedFacts.map((fact: string, i: number) => (
                 <div key={i} style={{ padding: "8px", backgroundColor: "#F8F9FB", border: "1px solid #E5E7EB", borderRadius: "4px", fontSize: "12px", fontFamily: "monospace", color: "#111827", wordBreak: "break-all" }}>

@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "asm-scanner-worker"
 version = "1.0.0"
-description = "Isolated Scanner Worker Pool for Attack Surface Monitor"
+description = "Isolated Scanner Worker Pool for SECDEF"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [

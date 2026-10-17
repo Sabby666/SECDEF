@@ -112,8 +112,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <title>ASM Console — Attack Surface Monitor</title>
-        <meta name="description" content="Attack Surface Monitor & Exposure Management Workspace" />
+        <title>SECDEF — External Attack Surface Management</title>
+        <meta name="description" content="SECDEF: External Attack Surface Management & Exposure Intelligence Platform" />
       </head>
       <body>
         <div style={{ display: "flex", flexDirection: "column", minHeight: "100vh", backgroundColor: "var(--bg-app)" }}>
@@ -134,7 +134,7 @@ export default function RootLayout({
               <Link href="/" style={{ display: "flex", alignItems: "center", gap: "8px" }}>
                 <Shield size={18} style={{ color: "#2563EB" }} />
                 <span style={{ fontWeight: 700, fontSize: "15px", color: "#111827", letterSpacing: "-0.2px" }}>
-                  ASM Console
+                  SECDEF
                 </span>
               </Link>
 
@@ -257,7 +257,7 @@ export default function RootLayout({
                 justifyContent: "space-between"
               }}>
                 <div>
-                  <div style={{ fontSize: "11.5px", fontWeight: 700, color: "var(--text-primary)" }}>ASM Ops</div>
+                  <div style={{ fontSize: "11.5px", fontWeight: 700, color: "var(--text-primary)" }}>SECDEF Ops</div>
                   <div style={{ fontSize: "10px", color: "var(--text-tertiary)" }}>Engine v4.12</div>
                 </div>
                 <button className="asm-btn asm-btn-secondary" style={{ padding: "2px 6px", fontSize: "10.5px" }}>
